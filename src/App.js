@@ -1,17 +1,10 @@
-
 import './App.css';
+import { WebLayout } from './Layout/WebLayout';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-
-        <p>
-          Challenge Index
-        </p>
-
-      </header>
-    </div>
+    <WebLayout />
   );
 }
 
