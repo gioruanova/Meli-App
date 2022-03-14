@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="68.047" height="35.707" viewBox="0 0 68.047 35.707">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        font-size: 20px;
+        font-family: LucidaSans-Italic, Lucida Sans;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+  <g id="Grupo_1" data-name="Grupo 1" transform="translate(-951.953 -531.293)">
+    <path id="Trazado_2" data-name="Trazado 2" class="cls-1" d="M12.408,12.128c2.4.052,4.014-.469,3.545.626l-.708,3.83h5.442c.507,0,.973.538,1.207,1.4A4.677,4.677,0,0,1,21.8,20.67L12.279,46.645c-.34.93-.957,1.332-1.524.991A2.981,2.981,0,0,1,9.8,45.157V32.169H4.361c-.507,0-.973-.538-1.207-1.4a4.677,4.677,0,0,1,.091-2.689L8.133,12.962c.341-.929,1.877-.886,4.275-.832Z" transform="translate(948.954 519.244)"/>
+    <text id="FULL" class="cls-2" transform="translate(973 552)"><tspan x="0" y="0">FULL</tspan></text>
+  </g>
+</svg>

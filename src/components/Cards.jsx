@@ -15,6 +15,7 @@ import {
 } from "../components/Styles";
 
 import test from "../img/test.webp";
+import Icons from "./Icons";
 
 export const Cards = () => {
   return (
@@ -34,7 +35,12 @@ export const Cards = () => {
               <span> off</span>
             </Discount2>
           </FlexContainer2>
-          <Envio>Llega hoy</Envio>
+          <FlexContainer2>
+            <Envio>Llega hoy</Envio>
+
+            <Icons name="fullenvio" />
+          </FlexContainer2>
+
           <ProductName>Fumigadora de 2 cuerpos desmotanble</ProductName>
         </Separator>
       </CardContainer>
@@ -44,6 +50,7 @@ export const Cards = () => {
         <ProductImage src={test} alt="productimage"></ProductImage>
 
         <Separator>
+          <Icons name="enviohoy" />
           <ProductPrevAmount>$7.000</ProductPrevAmount>
 
           <FlexContainer2>

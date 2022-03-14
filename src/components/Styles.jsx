@@ -55,9 +55,10 @@ export const CardContainer = styled.div`
   width: auto;
   border-radius: 0.3rem;
   height: 32rem;
+  transition: 2s;
   &:hover {
     cursor: pointer;
-    border-color: 1px solid: red;
+    
   }
 `;
 
