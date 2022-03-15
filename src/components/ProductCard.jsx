@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   CardContainer,
   ProductName,
@@ -15,7 +15,8 @@ import {
   Options,
 } from "./Styles";
 import Icons from "./Icons";
-import { ProductsDetails } from "./Products";
+
+import axios from "axios";
 
 export const Item = ({
   id,
@@ -32,6 +33,8 @@ export const Item = ({
   fastship2,
   full,
 }) => {
+  const totalDisc = Math.trunc(100 - (amount / prevamount) * 100);
+
   return (
     <>
       <CardContainer className="animate__animated animate__bounceIn animate__fast">
@@ -43,32 +46,33 @@ export const Item = ({
           <Separator />
         </SeparatorContainer>
 
-        {mostsell && <MostSell>más vendido</MostSell>}
+        {mostsell >= 5200 && <MostSell>más vendido</MostSell>}
 
-        <ProductPrevAmount>{prevamount}</ProductPrevAmount>
+        {prevamount && (
+          <ProductPrevAmount>${Math.trunc(prevamount)}</ProductPrevAmount>
+        )}
 
         <FlexContainer2>
-          <ProductCurrentAmount>{amount}</ProductCurrentAmount>
+          <ProductCurrentAmount>${Math.trunc(amount)}</ProductCurrentAmount>
 
-          {discountOrange && (
+          {(prevamount && totalDisc >= 25 && (
             <DiscountOrange>
-              {discountOrange}
+              {Math.ceil(totalDisc)}
               <span>% off</span>
             </DiscountOrange>
-          )}
-
-          {discountGreen && (
-            <DiscountGreen>
-              {discountGreen}
-              <span>% off</span>
-            </DiscountGreen>
-          )}
+          )) ||
+            (prevamount && (
+              <DiscountGreen>
+                {totalDisc}
+                <span>% off</span>
+              </DiscountGreen>
+            ))}
         </FlexContainer2>
         <FlexContainer2>
           {fastship1 && <Envio>llega hoy</Envio>}
-          {fastship2 && <Envio>llega gratis hoy</Envio>}
+          {!fastship2 && <Envio>llega gratis hoy</Envio>}
 
-          {full && <Icons name="fullenvio" />}
+          {!full && <Icons name="fullenvio" />}
         </FlexContainer2>
 
         <ProductName>{title}</ProductName>
@@ -77,22 +81,36 @@ export const Item = ({
   );
 };
 
-export default function ProductCard() {
-  return ProductsDetails.map((e) => (
-    <Item
-      id={e.id}
-      picture={e.picture}
-      discountOrange={e.discountOrange}
-      amount={e.amount}
-      prevamount={e.prevamount}
-      title={e.title}
-      discountGreen={e.discountGreen}
-      mostsell={e.mostsell}
-      colors={e.colors}
-      truck={e.truck}
-      fastship1={e.fastship1}
-      fastship2={e.fastship2}
-      full={e.full}
-    />
-  ));
+export function ProductCard() {
+  const [data, setItem] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://api.mercadolibre.com/sites/MLA/search?q=oferta&limit=50")
+      .then((res) => {
+        setItem(res.data.results);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  return data
+    .slice(9, 12)
+    .map((data) => (
+      <Item
+        key={data.id}
+        id={data.id}
+        picture={data.thumbnail}
+        discountOrange={data.discountOrange}
+        amount={data.price}
+        prevamount={data.original_price}
+        title={data.title}
+        discountGreen={data.discountGreen}
+        mostsell={data.sold_quantity}
+        colors={data.colors}
+        truck={data.shipping.free_shipping}
+        fastship1={data.shipping.local_pick_up}
+        fastship2={data.shipping.local_pick_up}
+        full={data.shipping.store_pick_up}
+      />
+    ));
 }

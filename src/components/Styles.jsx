@@ -15,6 +15,9 @@ export const FooterComponent = styled(HeaderComponent)`
   justify-content: center;
   text-align: start;
   align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 `;
 
 export const HeaderTitle = styled.h1`
@@ -58,11 +61,12 @@ export const Links = styled.a`
 
 export const Background = styled.div`
   background-color: #e7e7e7;
-  height: 100vh;
+  height: ${isMobile ? "100%" : "100vh"};
   overflow-y: auto;
   overflow-x: hidden;
   width: 100%;
   position: relative;
+  padding-bottom: ${isMobile ? "4rem" : ""};
 `;
 
 // ----------------
@@ -88,9 +92,11 @@ export const CardContainer = styled.div`
 export const FlexContainer = styled.div`
   display: flex;
   flex-direction: ${isMobile ? "column" : "row"};
-
   justify-content: center;
   text-align: start;
+  flex-wrap: wrap;
+  align-item: center;
+  
 `;
 
 export const FlexContainer2 = styled(FlexContainer)`
@@ -135,6 +141,7 @@ export const ProductCurrentAmount = styled.p`
   margin: 0;
   padding-right: 1rem;
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
 `;
 
 export const DiscountGreen = styled.p`
