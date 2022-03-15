@@ -36,7 +36,7 @@ export const Item = ({
   return (
     <>
       
-        <CardContainer>
+        <CardContainer className="animate__animated animate__bounceIn animate__fast">
           <ProductImage src={picture} alt={id}></ProductImage>
           <SeparatorContainer>
             {truck && <Icons name="enviohoy" />}

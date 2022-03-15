@@ -3,7 +3,7 @@ import { FooterComponent, Links, FooterFont } from "./Styles";
 
 export const Footer = () => {
   return (
-    <FooterComponent>
+    <FooterComponent className="animate__animated animate__bounceInLeft animate__fast">
       <FooterFont>
         Developed by{" "}
         <Links

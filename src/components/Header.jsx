@@ -10,7 +10,7 @@ import ml from "../img/ml.png";
 
 export const Header = () => {
   return (
-    <HeaderComponent>
+    <HeaderComponent className="animate__animated animate__bounceInDown animate__fast">
       <Links
         href="https://www.mercadolibre.com.ar/"
         target="_blank"
