@@ -190,7 +190,7 @@ export const ProductName = styled.p`
   width:20rem;
 `;
 
-export const Truck = styled.div`
+export const Options = styled.div`
   position: absolute;
   top: 0rem;
   left: 0.5rem;
