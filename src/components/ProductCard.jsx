@@ -35,7 +35,7 @@ export const Item = ({
 }) => {
   return (
     <>
-      <FlexContainer>
+      
         <CardContainer>
           <ProductImage src={picture} alt={id}></ProductImage>
           <SeparatorContainer>
@@ -45,7 +45,7 @@ export const Item = ({
             <Separator />
           </SeparatorContainer>
 
-          {mostsell && <MostSell>mas vendido</MostSell>}
+          {mostsell && <MostSell>más vendido</MostSell>}
 
           <ProductPrevAmount>{prevamount}</ProductPrevAmount>
 
@@ -67,15 +67,15 @@ export const Item = ({
             )}
           </FlexContainer2>
           <FlexContainer2>
-            {fastship1 && <Envio>Llega hoy</Envio>}
-            {fastship2 && <Envio>Llega gratis hoyy</Envio>}
+            {fastship1 && <Envio>llega hoy</Envio>}
+            {fastship2 && <Envio>llega gratis hoy</Envio>}
 
             {full && <Icons name="fullenvio" />}
           </FlexContainer2>
 
           <ProductName>{title}</ProductName>
         </CardContainer>
-      </FlexContainer>
+      
     </>
   );
 };

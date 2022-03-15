@@ -140,11 +140,12 @@ export const ProductCurrentAmount = styled.p`
 export const DiscountGreen = styled.p`
   color: #00a650;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0;
   border-radius: 0.2rem;
   width: fit-content;
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
 `;
 export const DiscountOrange = styled(DiscountGreen)`
   color: white;
@@ -154,9 +155,10 @@ export const DiscountOrange = styled(DiscountGreen)`
   width: 3rem;
   text-align: center;
   background-color: #ea710f;
-  padding: 0 0.6rem;
+  padding: 0.2rem 0.4rem;
   word-break: break-word;
   font-family: "Roboto", sans-serif;
+  font-weight: normal;
 `;
 
 export const MostSell = styled(DiscountGreen)`
@@ -166,7 +168,7 @@ export const MostSell = styled(DiscountGreen)`
   margin: 0 0 0.5rem 0;
   text-align: center;
   background-color: #ea710f;
-  padding: 0.1rem 0.2rem;
+  padding: 0.2rem 0.2rem;
   word-break: break-word;
   font-family: "Roboto", sans-serif;
 `;
@@ -179,6 +181,9 @@ export const Envio = styled(DiscountGreen)`
   background-color: #00a650;
   padding: 0.1rem 0.5rem;
   border-radius: 0.2rem;
+  &:first-letter {
+    text-transform: capitalize;
+  }
 `;
 
 export const ProductName = styled.p`
@@ -187,7 +192,7 @@ export const ProductName = styled.p`
   margin: 0.5rem 0;
   color: grey;
   font-family: "Roboto", sans-serif;
-  width:20rem;
+  width: 20rem;
 `;
 
 export const Options = styled.div`
@@ -200,4 +205,5 @@ export const Options = styled.div`
   padding: 0 0.2rem;
   border-radius: 4px;
   background-color: white;
+  color: grey;
 `;

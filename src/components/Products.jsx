@@ -51,4 +51,6 @@ export const ProductsDetails = [
     fastship2: true,
     full: false,
   },
+
+  
 ];
