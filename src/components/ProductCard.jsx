@@ -2,7 +2,6 @@ import React from "react";
 import {
   CardContainer,
   ProductName,
-  FlexContainer,
   ProductImage,
   FlexContainer2,
   DiscountOrange,
@@ -35,47 +34,45 @@ export const Item = ({
 }) => {
   return (
     <>
-      
-        <CardContainer className="animate__animated animate__bounceIn animate__fast">
-          <ProductImage src={picture} alt={id}></ProductImage>
-          <SeparatorContainer>
-            {truck && <Icons name="enviohoy" />}
+      <CardContainer className="animate__animated animate__bounceIn animate__fast">
+        <ProductImage src={picture} alt={id}></ProductImage>
+        <SeparatorContainer>
+          {truck && <Icons name="enviohoy" />}
 
-            {colors && <Options>{colors} colores</Options>}
-            <Separator />
-          </SeparatorContainer>
+          {colors && <Options>{colors} colores</Options>}
+          <Separator />
+        </SeparatorContainer>
 
-          {mostsell && <MostSell>más vendido</MostSell>}
+        {mostsell && <MostSell>más vendido</MostSell>}
 
-          <ProductPrevAmount>{prevamount}</ProductPrevAmount>
+        <ProductPrevAmount>{prevamount}</ProductPrevAmount>
 
-          <FlexContainer2>
-            <ProductCurrentAmount>{amount}</ProductCurrentAmount>
+        <FlexContainer2>
+          <ProductCurrentAmount>{amount}</ProductCurrentAmount>
 
-            {discountOrange && (
-              <DiscountOrange>
-                {discountOrange}
-                <span>% off</span>
-              </DiscountOrange>
-            )}
+          {discountOrange && (
+            <DiscountOrange>
+              {discountOrange}
+              <span>% off</span>
+            </DiscountOrange>
+          )}
 
-            {discountGreen && (
-              <DiscountGreen>
-                {discountGreen}
-                <span>% off</span>
-              </DiscountGreen>
-            )}
-          </FlexContainer2>
-          <FlexContainer2>
-            {fastship1 && <Envio>llega hoy</Envio>}
-            {fastship2 && <Envio>llega gratis hoy</Envio>}
+          {discountGreen && (
+            <DiscountGreen>
+              {discountGreen}
+              <span>% off</span>
+            </DiscountGreen>
+          )}
+        </FlexContainer2>
+        <FlexContainer2>
+          {fastship1 && <Envio>llega hoy</Envio>}
+          {fastship2 && <Envio>llega gratis hoy</Envio>}
 
-            {full && <Icons name="fullenvio" />}
-          </FlexContainer2>
+          {full && <Icons name="fullenvio" />}
+        </FlexContainer2>
 
-          <ProductName>{title}</ProductName>
-        </CardContainer>
-      
+        <ProductName>{title}</ProductName>
+      </CardContainer>
     </>
   );
 };
