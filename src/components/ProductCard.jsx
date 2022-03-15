@@ -2,21 +2,15 @@ import React from "react";
 import {
   CardContainer,
   ProductName,
-  ProductCurrentAmount,
-  ProductPrevAmount,
   FlexContainer,
   ProductImage,
-  Discount1,
   FlexContainer2,
   Discount2,
-  Envio,
   Separator,
   SeparatorContainer,
-  MostSell,
 } from "./Styles";
 
 import test1 from "../img/test1.webp";
-import Icons from "./Icons";
 
 export const ProductCard = () => {
   return (
