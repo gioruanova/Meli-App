@@ -87,7 +87,8 @@ export const CardContainer = styled.div`
 
 export const FlexContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${isMobile ? "column" : "row"};
+
   justify-content: center;
   text-align: start;
 `;
@@ -186,10 +187,10 @@ export const ProductName = styled.p`
   margin: 0.5rem 0;
   color: grey;
   font-family: "Roboto", sans-serif;
-  width: 20rem;
+  width:20rem;
 `;
 
-export const Options = styled.div`
+export const Truck = styled.div`
   position: absolute;
   top: 0rem;
   left: 0.5rem;
