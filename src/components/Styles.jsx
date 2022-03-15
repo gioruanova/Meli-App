@@ -87,8 +87,7 @@ export const CardContainer = styled.div`
 
 export const FlexContainer = styled.div`
   display: flex;
-  flex-direction: ${isMobile ? "column" : "row"};
-
+  flex-direction: row;
   justify-content: center;
   text-align: start;
 `;
@@ -137,7 +136,7 @@ export const ProductCurrentAmount = styled.p`
   font-family: "Roboto", sans-serif;
 `;
 
-export const Discount1 = styled.p`
+export const DiscountGreen = styled.p`
   color: #00a650;
   text-transform: uppercase;
   font-size: 1rem;
@@ -146,20 +145,20 @@ export const Discount1 = styled.p`
   width: fit-content;
   font-family: "Roboto", sans-serif;
 `;
-export const Discount2 = styled(Discount1)`
+export const DiscountOrange = styled(DiscountGreen)`
   color: white;
   text-transform: uppercase;
   font-size: 0.8rem;
   margin: 0;
-  width: 2rem;
+  width: 3rem;
   text-align: center;
   background-color: #ea710f;
-  padding: 0.1rem 0.6rem;
+  padding: 0 0.6rem;
   word-break: break-word;
   font-family: "Roboto", sans-serif;
 `;
 
-export const MostSell = styled(Discount1)`
+export const MostSell = styled(DiscountGreen)`
   color: white;
   text-transform: uppercase;
   font-size: 0.6rem;
@@ -171,7 +170,7 @@ export const MostSell = styled(Discount1)`
   font-family: "Roboto", sans-serif;
 `;
 
-export const Envio = styled(Discount1)`
+export const Envio = styled(DiscountGreen)`
   color: white;
   text-transform: none;
   font-size: 0.8rem;
@@ -187,9 +186,10 @@ export const ProductName = styled.p`
   margin: 0.5rem 0;
   color: grey;
   font-family: "Roboto", sans-serif;
+  width: 20rem;
 `;
 
-export const Truck = styled.div`
+export const Options = styled.div`
   position: absolute;
   top: 0rem;
   left: 0.5rem;

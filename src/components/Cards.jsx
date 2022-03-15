@@ -6,14 +6,14 @@ import {
   ProductPrevAmount,
   FlexContainer,
   ProductImage,
-  Discount1,
+  DiscountGreen,
   FlexContainer2,
-  Discount2,
+  DiscountOrange,
   Envio,
   Separator,
   SeparatorContainer,
   MostSell,
-  Truck,
+  Options,
 } from "../components/Styles";
 
 import test1 from "../img/test1.webp";
@@ -35,10 +35,10 @@ export const Cards = () => {
         <FlexContainer2>
           <ProductCurrentAmount>$5.099</ProductCurrentAmount>
 
-          <Discount2>
+          <DiscountOrange>
             25%
             <span> off</span>
-          </Discount2>
+          </DiscountOrange>
         </FlexContainer2>
         <FlexContainer2>
           <Envio>Llega hoy</Envio>
@@ -62,10 +62,10 @@ export const Cards = () => {
 
         <FlexContainer2>
           <ProductCurrentAmount>$5.099</ProductCurrentAmount>
-          <Discount1>
+          <DiscountGreen>
             20%
             <span> off</span>
-          </Discount1>
+          </DiscountGreen>
         </FlexContainer2>
         <ProductName>Fumigadora de 2 cuerpos desmotanble</ProductName>
       </CardContainer>
@@ -74,7 +74,7 @@ export const Cards = () => {
       <CardContainer>
         <ProductImage src={test3} alt="productimage"></ProductImage>
         <SeparatorContainer>
-          <Truck>3 colores</Truck>
+          <Options>3 colores</Options>
           <Separator />
         </SeparatorContainer>
         <MostSell>Mas vendido</MostSell>
@@ -82,10 +82,10 @@ export const Cards = () => {
 
         <FlexContainer2>
           <ProductCurrentAmount>$5.099</ProductCurrentAmount>
-          <Discount1>
+          <DiscountGreen>
             21%
             <span> off</span>
-          </Discount1>
+          </DiscountGreen>
         </FlexContainer2>
         <Envio>Llega gratis hoy</Envio>
         <ProductName>Fumigadora de 2 cuerpos desmotanble</ProductName>
