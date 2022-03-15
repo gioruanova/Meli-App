@@ -3,7 +3,9 @@ import styled from "styled-components";
 import { ReactSVG } from "react-svg";
 
 const IconWrapper = styled.div`
-padding: 0rem 0.2rem;
+margin:0;
+border-radius:20rem;
+background-color:white;
 
   svg {
     display: flex;
@@ -15,7 +17,11 @@ padding: 0rem 0.2rem;
   `;
 
 const IconWrapper2 = styled(IconWrapper)`
-padding: 0rem 0.2rem;
+position: absolute;
+top:-0.5rem;
+right:0.5rem;
+z-index:9999;
+
   svg {
      width: 1.5rem;
      height: 1.5rem;

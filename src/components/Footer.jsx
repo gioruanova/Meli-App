@@ -1,9 +1,9 @@
 import React from "react";
-import { HeaderComponent, Links, FooterFont } from "./Styles";
+import { FooterComponent, Links, FooterFont } from "./Styles";
 
 export const Footer = () => {
   return (
-    <HeaderComponent>
+    <FooterComponent>
       <FooterFont>
         Developed by{" "}
         <Links
@@ -16,6 +16,6 @@ export const Footer = () => {
           Giorgio Ruanova
         </Links>
       </FooterFont>
-    </HeaderComponent>
+    </FooterComponent>
   );
 };

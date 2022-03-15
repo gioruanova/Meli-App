@@ -6,15 +6,18 @@ import {
   ProductPrevAmount,
   FlexContainer,
   ProductImage,
-  Separator,
   Discount1,
   FlexContainer2,
   Discount2,
   Envio,
-  Vendido,
+  Separator,
+  SeparatorContainer,
+  MostSell,
 } from "../components/Styles";
 
-import test from "../img/test.webp";
+import test1 from "../img/test1.webp";
+import test2 from "../img/test2.webp";
+import test3 from "../img/test3.webp";
 import Icons from "./Icons";
 
 export const Cards = () => {
@@ -22,66 +25,68 @@ export const Cards = () => {
     <FlexContainer>
       {/* ---------------------CARD 1---------------------------- */}
       <CardContainer>
-        <ProductImage src={test} alt="productimage"></ProductImage>
+        <ProductImage src={test1} alt="productimage"></ProductImage>
+        <SeparatorContainer>
+          <Separator />
+        </SeparatorContainer>
+        <ProductPrevAmount>$7.000</ProductPrevAmount>
 
-        <Separator>
-          <ProductPrevAmount>$7.000</ProductPrevAmount>
+        <FlexContainer2>
+          <ProductCurrentAmount>$5.099</ProductCurrentAmount>
 
-          <FlexContainer2>
-            <ProductCurrentAmount>$5.099</ProductCurrentAmount>
+          <Discount2>
+            25%
+            <span> off</span>
+          </Discount2>
+        </FlexContainer2>
+        <FlexContainer2>
+          <Envio>Llega hoy</Envio>
 
-            <Discount2>
-              25%
-              <span> off</span>
-            </Discount2>
-          </FlexContainer2>
-          <FlexContainer2>
-            <Envio>Llega hoy</Envio>
+          <Icons name="fullenvio" />
+        </FlexContainer2>
 
-            <Icons name="fullenvio" />
-          </FlexContainer2>
-
-          <ProductName>Fumigadora de 2 cuerpos desmotanble</ProductName>
-        </Separator>
+        <ProductName>Fumigadora de 2 cuerpos desmotanble</ProductName>
       </CardContainer>
 
       {/* ---------------------CARD 2---------------------------- */}
       <CardContainer>
-        <ProductImage src={test} alt="productimage"></ProductImage>
+        <ProductImage src={test2} alt="productimage"></ProductImage>
 
-        <Separator>
+        <SeparatorContainer>
           <Icons name="enviohoy" />
-          <ProductPrevAmount>$7.000</ProductPrevAmount>
+          <Separator />
+        </SeparatorContainer>
 
-          <FlexContainer2>
-            <ProductCurrentAmount>$5.099</ProductCurrentAmount>
-            <Discount1>
-              20%
-              <span> off</span>
-            </Discount1>
-          </FlexContainer2>
-          <ProductName>Fumigadora de 2 cuerpos desmotanble</ProductName>
-        </Separator>
+        <ProductPrevAmount>$7.000</ProductPrevAmount>
+
+        <FlexContainer2>
+          <ProductCurrentAmount>$5.099</ProductCurrentAmount>
+          <Discount1>
+            20%
+            <span> off</span>
+          </Discount1>
+        </FlexContainer2>
+        <ProductName>Fumigadora de 2 cuerpos desmotanble</ProductName>
       </CardContainer>
 
       {/* ---------------------CARD 3---------------------------- */}
       <CardContainer>
-        <ProductImage src={test} alt="productimage"></ProductImage>
+        <ProductImage src={test3} alt="productimage"></ProductImage>
+        <SeparatorContainer>
+          <Separator />
+        </SeparatorContainer>
+        <MostSell>Mas vendido</MostSell>
+        <ProductPrevAmount>$7.000</ProductPrevAmount>
 
-        <Separator>
-          <Vendido>Mas vendido</Vendido>
-          <ProductPrevAmount>$7.000</ProductPrevAmount>
-
-          <FlexContainer2>
-            <ProductCurrentAmount>$5.099</ProductCurrentAmount>
-            <Discount1>
-              21%
-              <span> off</span>
-            </Discount1>
-          </FlexContainer2>
-          <Envio>Llega gratis hoy</Envio>
-          <ProductName>Fumigadora de 2 cuerpos desmotanble</ProductName>
-        </Separator>
+        <FlexContainer2>
+          <ProductCurrentAmount>$5.099</ProductCurrentAmount>
+          <Discount1>
+            21%
+            <span> off</span>
+          </Discount1>
+        </FlexContainer2>
+        <Envio>Llega gratis hoy</Envio>
+        <ProductName>Fumigadora de 2 cuerpos desmotanble</ProductName>
       </CardContainer>
     </FlexContainer>
   );
