@@ -13,6 +13,7 @@ import {
   Separator,
   SeparatorContainer,
   MostSell,
+  Truck,
 } from "../components/Styles";
 
 import test1 from "../img/test1.webp";
@@ -73,6 +74,7 @@ export const Cards = () => {
       <CardContainer>
         <ProductImage src={test3} alt="productimage"></ProductImage>
         <SeparatorContainer>
+          <Truck>3 colores</Truck>
           <Separator />
         </SeparatorContainer>
         <MostSell>Mas vendido</MostSell>

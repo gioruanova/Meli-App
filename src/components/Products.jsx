@@ -1,5 +1,7 @@
 // PORTFOLIO
 import test1 from "../img/test1.webp";
+import test2 from "../img/test2.webp";
+import test3 from "../img/test3.webp";
 
 export const ProductsDetails = [
   {
@@ -11,14 +13,14 @@ export const ProductsDetails = [
 
   {
     id: "product2",
-    picture: test,
+    picture: test2,
     title: "Vaporera desmontable",
     discountOrange: 0,
   },
 
   {
     id: "product3",
-    picture: test,
+    picture: test3,
     title: "Celular Motorola E7",
     discountOrange: 0,
   },

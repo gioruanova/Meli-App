@@ -111,6 +111,7 @@ export const ProductImage = styled.img`
 export const SeparatorContainer = styled.div`
   width: 100%;
   position: relative;
+  margin: 0 0 0.5rem 0;
 `;
 
 export const Separator = styled.hr`
@@ -161,8 +162,8 @@ export const Discount2 = styled(Discount1)`
 export const MostSell = styled(Discount1)`
   color: white;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  margin: 0;
+  font-size: 0.6rem;
+  margin: 0 0 0.5rem 0;
   text-align: center;
   background-color: #ea710f;
   padding: 0.1rem 0.2rem;
@@ -180,12 +181,22 @@ export const Envio = styled(Discount1)`
   border-radius: 0.2rem;
 `;
 
-
-
 export const ProductName = styled.p`
   text-transform: capitalize;
   font-size: 0.8rem;
   margin: 0.5rem 0;
   color: grey;
   font-family: "Roboto", sans-serif;
+`;
+
+export const Truck = styled.div`
+  position: absolute;
+  top: 0rem;
+  left: 0.5rem;
+  z-index: 9999;
+  font-size: 0.7rem;
+  border: 1px solid #e2d7d7;
+  padding: 0 0.2rem;
+  border-radius: 4px;
+  background-color: white;
 `;
