@@ -12,7 +12,6 @@ import {
   Envio,
   DiscountGreen,
   MostSell,
-  Options,
   Links,
 } from "./Styles";
 import Icons from "./Icons";
@@ -23,16 +22,10 @@ export const Item = ({
   id,
   picture,
   title,
-  discountOrange,
   amount,
   prevamount,
-  discountGreen,
   mostsell,
-  colors,
   truck,
-  fastship1,
-  fastship2,
-  full,
   linkproduct,
 }) => {
   const totalDisc = Math.trunc(100 - (amount / prevamount) * 100);
@@ -44,7 +37,6 @@ export const Item = ({
         <SeparatorContainer>
           {truck && <Icons name="enviohoy" />}
 
-          {colors && <Options>{colors} colores</Options>}
           <Separator />
         </SeparatorContainer>
 
