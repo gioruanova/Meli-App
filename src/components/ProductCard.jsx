@@ -12,7 +12,7 @@ import {
   Envio,
   DiscountGreen,
   MostSell,
-  Options,
+  Options,Links
 } from "./Styles";
 import Icons from "./Icons";
 
@@ -31,12 +31,12 @@ export const Item = ({
   truck,
   fastship1,
   fastship2,
-  full,
+  full,linkproduct
 }) => {
   const totalDisc = Math.trunc(100 - (amount / prevamount) * 100);
 
   return (
-    <>
+    <Links href={linkproduct} target="_blank">
       <CardContainer className="animate__animated animate__bounceIn animate__fast">
         <ProductImage src={picture} alt={id}></ProductImage>
         <SeparatorContainer>
@@ -77,7 +77,7 @@ export const Item = ({
 
         <ProductName>{title}</ProductName>
       </CardContainer>
-    </>
+    </Links>
   );
 };
 
@@ -86,7 +86,7 @@ export function ProductCard() {
 
   useEffect(() => {
     axios
-      .get("https://api.mercadolibre.com/sites/MLA/search?q=oferta&limit=13")
+      .get("https://api.mercadolibre.com/sites/MLA/search?q=oferta&limit=5")
       .then((res) => {
         setItem(res.data.results);
       })
@@ -109,6 +109,7 @@ export function ProductCard() {
         fastship1={data.shipping.local_pick_up}
         fastship2={data.shipping.local_pick_up}
         full={data.shipping.store_pick_up}
+        linkproduct={data.permalink}
       />
     ));
 }

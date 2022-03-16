@@ -22,7 +22,7 @@ export const FooterComponent = styled(HeaderComponent)`
 
 export const BodyTitle = styled.p`
   font-size: 2rem;
-  color: #222121;
+  color: #666;
   text-transform: capitalize;
   padding: 1rem;
   margin-top: ${isMobile ? "" : "2rem"};
@@ -41,9 +41,9 @@ export const HeaderImage1 = styled.img`
   }
 `;
 export const HeaderImage2 = styled(HeaderImage1)`
-  height: 2rem;
-  border-radius: 1rem;
-  padding: 0.8rem;
+  height: 3rem;
+  border-radius: 20rem;
+  padding: 0.2rem;
   &:hover {
     background-color: yellow;
   }
@@ -94,7 +94,7 @@ export const CardContainer = styled.div`
   margin: 1rem 1rem;
   width: auto;
   border-radius: 0.3rem;
-  height: auto;
+  height: 80%;
   transition: 0.5s;
   &:hover {
     cursor: pointer;
