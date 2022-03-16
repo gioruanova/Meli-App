@@ -69,10 +69,10 @@ export const Item = ({
             ))}
         </FlexContainer2>
         <FlexContainer2>
-          {fastship1 && <Envio>llega hoy</Envio>}
-          {!fastship2 && <Envio>llega gratis hoy</Envio>}
+          {!truck && <Envio>llega hoy</Envio>}
+          {truck && <Envio>llega gratis hoy</Envio>}
 
-          {!full && <Icons name="fullenvio" />}
+          {!truck && <Icons name="fullenvio" />}
         </FlexContainer2>
 
         <ProductName>{title}</ProductName>
@@ -86,7 +86,7 @@ export function ProductCard() {
 
   useEffect(() => {
     axios
-      .get("https://api.mercadolibre.com/sites/MLA/search?q=oferta&limit=50")
+      .get("https://api.mercadolibre.com/sites/MLA/search?q=oferta&limit=13")
       .then((res) => {
         setItem(res.data.results);
       })
@@ -94,7 +94,7 @@ export function ProductCard() {
   }, []);
 
   return data
-    .slice(9, 12)
+    .slice(1, 4)
     .map((data) => (
       <Item
         key={data.id}
@@ -103,7 +103,6 @@ export function ProductCard() {
         picture={data.thumbnail}
         amount={data.price}
         prevamount={data.original_price}
-        discountGreen={data.discountGreen}
         mostsell={data.sold_quantity}
         colors={""}
         truck={data.shipping.free_shipping}

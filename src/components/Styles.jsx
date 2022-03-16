@@ -97,6 +97,7 @@ export const CardContainer = styled.div`
     box-shadow: rgb(98 98 98 / 25%) 10px 22px 22px,
       rgb(109 109 109 / 24%) 18px 20px 42px;
   }
+  margin-top:${isMobile ? "": "10rem"};
 `;
 
 export const FlexContainer = styled.div`
@@ -177,7 +178,7 @@ export const DiscountOrange = styled(DiscountGreen)`
   word-break: break-word;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  margin-bottom: 5rem;
+  
 `;
 
 export const MostSell = styled(DiscountGreen)`
