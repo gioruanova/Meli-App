@@ -20,12 +20,16 @@ export const FooterComponent = styled(HeaderComponent)`
   width: 100%;
 `;
 
-export const HeaderTitle = styled.h1`
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #333;
+export const BodyTitle = styled.p`
+  font-size: 2rem;
+  color: #222121;
+  text-transform: capitalize;
   padding: 1rem;
-  margin: 0;
+  margin-top: ${isMobile ? "" : "2rem"};
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin-bottom: 0;
 `;
 export const HeaderImage1 = styled.img`
   width: auto;
@@ -87,7 +91,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 1rem;
-  margin: 2rem 1rem;
+  margin: 1rem 1rem;
   width: auto;
   border-radius: 0.3rem;
   height: auto;
@@ -97,7 +101,7 @@ export const CardContainer = styled.div`
     box-shadow: rgb(98 98 98 / 25%) 10px 22px 22px,
       rgb(109 109 109 / 24%) 18px 20px 42px;
   }
-  margin-top:${isMobile ? "": "10rem"};
+  margin-top: ${isMobile ? "" : "3rem"};
 `;
 
 export const FlexContainer = styled.div`
@@ -107,7 +111,6 @@ export const FlexContainer = styled.div`
   text-align: start;
   flex-wrap: wrap;
   align-item: center;
-  
 `;
 
 export const FlexContainer2 = styled(FlexContainer)`
@@ -117,7 +120,6 @@ export const FlexContainer2 = styled(FlexContainer)`
   text-align: start;
   align-items: center;
   justify-content: start;
-  
 `;
 
 export const ProductImage = styled.img`
@@ -139,7 +141,6 @@ export const Separator = styled.hr`
 `;
 
 export const ProductPrevAmount = styled.p`
-  text-transform: capitalize;
   font-size: 0.8rem;
   margin: 0;
   color: grey;
@@ -148,7 +149,6 @@ export const ProductPrevAmount = styled.p`
 `;
 
 export const ProductCurrentAmount = styled.p`
-  text-transform: capitalize;
   font-size: 1.5rem;
   margin: 0;
   padding-right: 1rem;
@@ -178,7 +178,6 @@ export const DiscountOrange = styled(DiscountGreen)`
   word-break: break-word;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  
 `;
 
 export const MostSell = styled(DiscountGreen)`
