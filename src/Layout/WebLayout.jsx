@@ -10,7 +10,7 @@ export const WebLayout = () => {
   return (
     <Background>
       <Header />
-      <BodyTitle>Hot sale!!!</BodyTitle>
+      <BodyTitle className="animate__animated animate__bounceIn animate__fast">Hot sale!!!</BodyTitle>
       <FlexContainer>
         <ProductCard />
       </FlexContainer>
