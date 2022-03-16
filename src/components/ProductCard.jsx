@@ -12,7 +12,8 @@ import {
   Envio,
   DiscountGreen,
   MostSell,
-  Options,Links
+  Options,
+  Links,
 } from "./Styles";
 import Icons from "./Icons";
 
@@ -31,7 +32,8 @@ export const Item = ({
   truck,
   fastship1,
   fastship2,
-  full,linkproduct
+  full,
+  linkproduct,
 }) => {
   const totalDisc = Math.trunc(100 - (amount / prevamount) * 100);
 
