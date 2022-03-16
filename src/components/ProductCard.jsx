@@ -70,7 +70,7 @@ export const Item = ({
         </FlexContainer2>
         <FlexContainer2>
           {!truck && <Envio>llega hoy</Envio>}
-          {truck && <Envio>llega gratis hoy</Envio>}
+          {truck && <Envio>llega gratis mañana</Envio>}
 
           {!truck && <Icons name="fullenvio" />}
         </FlexContainer2>
