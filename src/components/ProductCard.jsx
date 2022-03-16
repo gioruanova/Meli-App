@@ -99,14 +99,13 @@ export function ProductCard() {
       <Item
         key={data.id}
         id={data.id}
+        title={data.title}
         picture={data.thumbnail}
-        discountOrange={data.discountOrange}
         amount={data.price}
         prevamount={data.original_price}
-        title={data.title}
         discountGreen={data.discountGreen}
         mostsell={data.sold_quantity}
-        colors={data.colors}
+        colors={""}
         truck={data.shipping.free_shipping}
         fastship1={data.shipping.local_pick_up}
         fastship2={data.shipping.local_pick_up}

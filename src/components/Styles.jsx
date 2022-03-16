@@ -30,9 +30,19 @@ export const HeaderTitle = styled.h1`
 export const HeaderImage1 = styled.img`
   width: auto;
   height: 5rem;
+  border-radius: 20rem;
+  transition: 1s;
+  &:hover {
+    background-color: yellow;
+  }
 `;
 export const HeaderImage2 = styled(HeaderImage1)`
   height: 2rem;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  &:hover {
+    background-color: yellow;
+  }
 `;
 
 export const FooterFont = styled.h1`
@@ -50,7 +60,7 @@ export const Links = styled.a`
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  transition: 1s;
+  transition: 0.5s;
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -106,6 +116,7 @@ export const FlexContainer2 = styled(FlexContainer)`
   text-align: start;
   align-items: center;
   justify-content: start;
+  
 `;
 
 export const ProductImage = styled.img`
@@ -166,6 +177,7 @@ export const DiscountOrange = styled(DiscountGreen)`
   word-break: break-word;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
+  margin-bottom: 5rem;
 `;
 
 export const MostSell = styled(DiscountGreen)`
