@@ -20,16 +20,6 @@ export const Header = () => {
       >
         <HeaderImage2 src={ml}></HeaderImage2>
       </Links>
-
-      <Links
-        href="https://www.estudioindex.com.ar/"
-        target="_blank"
-        rel="noreferrer"
-        title="Estudio Index"
-        aria-label="Estudio Index"
-      >
-        <HeaderImage1 src={estudio}></HeaderImage1>
-      </Links>
     </HeaderComponent>
   );
 };
