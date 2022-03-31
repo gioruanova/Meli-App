@@ -1,6 +1,6 @@
 import React from "react";
 import { HeaderComponent, HeaderImage2, Links } from "../components/Styles";
-import estudio from "../img/estudio.png";
+
 import ml from "../img/ml.png";
 
 export const Header = () => {
